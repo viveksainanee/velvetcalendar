@@ -19,6 +19,12 @@ group :development do
 	gem 'wirble'
 end
 
+group :test, :development do
+  gem 'sqlite3'
+  gem 'rspec-rails',    '~> 2.0'
+end
+
+
 # Gems used only in testing
 group :test do
 	gem 'shoulda'
