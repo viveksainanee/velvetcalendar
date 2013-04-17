@@ -1,0 +1,114 @@
+@import "twitter/bootstrap/bootstrap";
+
+body { 
+	background-color:#000000;
+	padding-top: 0px; 
+	font-size: 12px;
+	background-image:url('bg.jpg');
+	
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+} 
+
+.supertiny {
+	font-size: 5px;
+	/*line-height: 1.5;*/
+}
+
+.well {
+	line-height: 1.5;
+}
+
+.well li {
+	font-size: 130%;
+	line-height: 1.5;
+}
+
+.table th.centered, .table td.centered {
+    text-align: center;
+}
+
+select.date { width: 90px; }
+
+
+.table-striped tbody tr:nth-child(2n+1) td {
+	background-color: #F2FFFD;
+}
+
+
+.pagination span,
+.pagination em{
+  float: left;
+  padding: 0 14px;
+  line-height: 34px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+}
+.pagination a:hover,
+.pagination .active a {
+  background-color: #f5f5f5;
+}
+.pagination .active a {
+  color: #999999;
+  cursor: default;
+}
+.pagination .disabled a,
+.pagination .disabled a:hover {
+  color: #999999;
+  background-color: transparent;
+  cursor: default;
+}
+
+
+
+select.date{
+	width: 90px}
+
+select.time{
+	width: 90px}
+	
+div.transbox
+  {
+  background-color:#ffffff;
+  border:3px solid grey;
+  opacity:0.85;
+  filter:alpha(opacity=85); /* For IE8 and earlier */
+  }
+div.transbox:hover
+{
+opacity:0.95;
+filter:alpha(opacity=95); /* For IE8 and earlier */
+}	
+.navbar-inner {
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+#footer {
+	margin-top: 15px;
+  padding-top: 0px;
+  /*border-top: 1px solid #eee;*/
+	background-color:#E6E6E6;
+	text-align: center;
+}
+
+#copy {
+	font-size: 85%;
+	text-align: center;
+}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/less.html for their names and documentation
+//

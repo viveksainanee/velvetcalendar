@@ -1,0 +1,52 @@
+
+<h1><font color="#FFFFFF">Events</font></h1>
+
+<div class="row">
+	<div class="span6">
+ <font color='black'>.</font>
+
+<div class="transbox">
+<div class="well" style="background-color:#FFFFFF">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= link_to event.title, event_path(event) %></td>
+        <td><%= event.start_time %></td>
+        <td><%= event.end_time %></td>
+        <td><%= event.description %></td>
+        <td><%= event.status %></td>
+        <td>
+          <%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', event_path(event), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+	  <a href= <%= event.add_to_button %>><img src="https://www.govevents.com/image/add-to-calendar-button.gif" border=0></a>
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_event_path, :class => 'btn btn-primary' %>
+
+</div></div>
+</div><p>
+
+<div class="span6">.</div>
+
+
+<iframe src="https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vs1234%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="450" frameborder="0" scrolling="no"></iframe>
+
+</div></div>
+

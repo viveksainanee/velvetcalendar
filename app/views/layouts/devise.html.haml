@@ -1,0 +1,6 @@
+-# see http://guides.rubyonrails.org/layouts_and_rendering.html#using-nested-layouts
+-# i don't really know if this is the best way to manage views
+- content_for :content do
+  = render partial: 'layouts/devise_flash'
+  = yield
+= render template: 'layouts/application'
