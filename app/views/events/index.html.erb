@@ -2,9 +2,9 @@
 <h1><font color="#FFFFFF">Events</font></h1>
 
 <div class="row">
-	<div class="span6">
+	<div class="span4">
  <font color='black'>.</font>
-
+<p>
 <div class="transbox">
 <div class="well" style="background-color:#FFFFFF">
 
@@ -14,8 +14,6 @@
       <th>Title</th>
       <th>Start Time</th>
       <th>End Time</th>
-      <th>Description</th>
-      <th>Status</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -23,10 +21,8 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= link_to event.title, event_path(event) %></td>
-        <td><%= event.start_time %></td>
-        <td><%= event.end_time %></td>
-        <td><%= event.description %></td>
-        <td><%= event.status %></td>
+        <td><%= event.start_time.strftime("%m/%d/%y %l:%M %p") %></td>
+        <td><%= event.end_time.strftime("%m/%d/%y %l:%M %p") %></td>
         <td>
           <%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-mini' %>
           <%= link_to 'Destroy', event_path(event), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
@@ -43,10 +39,10 @@
 </div></div>
 </div><p>
 
-<div class="span6">.</div>
+<div class="span8">.</div>
 
 
-<iframe src="https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vs1234%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="450" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vs1234%40gmail.com&amp;color=%22222222&amp;ctz=America%2FNew_York" style=" border-width:5 " width="800" height="600" frameborder="10" scrolling="no"></iframe>
 
 </div></div>
 

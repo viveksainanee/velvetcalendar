@@ -12,6 +12,8 @@
     <legend><%= controller.action_name.capitalize %> Event</legend>
 
 		<%= f.input :title %>
+		<%= f.input :start_time, :ampm => true, :minute_step => 15  %>
+		<%= f.input :end_time, :ampm => true, :minute_step => 15  %>
 		<%= f.input :description, :input_html => {:rows => 5} %>
 		<%= f.input :status %>
 
