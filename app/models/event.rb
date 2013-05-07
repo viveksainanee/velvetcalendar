@@ -19,6 +19,13 @@ class Event < ActiveRecord::Base
         "http://www.google.com/calendar/event?action=TEMPLATE&text="+"#{title}"+"&dates="+  "#{start_time.to_s[0,4]}" +  "#{start_time.to_s[5,2]}" + "#{start_time.to_s[8,2]}" + "T" +  "#{(start_time+4.hours).to_s[11,2]}" +  "#{start_time.to_s[14,2]}" + "00Z/"+  "#{end_time.to_s[0,4]}" +  "#{end_time.to_s[5,2]}" + "#{end_time.to_s[8,2]}" + "T" +  "#{(end_time+4.hours).to_s[11,2]}" +  "#{end_time.to_s[14,2]}" + "00Z&details=Description&location=Home&trp=false&sprop=&sprop=name:"
     end
 
+
+    
+    def custom_cal
+        
+        "http://www.google.com/calendar/event?action=TEMPLATE&text="+"#{title}"+"&dates="+  "#{start_time.to_s[0,4]}" +  "#{start_time.to_s[5,2]}" + "#{start_time.to_s[8,2]}" + "T" +  "#{(start_time+4.hours).to_s[11,2]}" +  "#{start_time.to_s[14,2]}" + "00Z/"+  "#{end_time.to_s[0,4]}" +  "#{end_time.to_s[5,2]}" + "#{end_time.to_s[8,2]}" + "T" +  "#{(end_time+4.hours).to_s[11,2]}" +  "#{end_time.to_s[14,2]}" + "00Z&details=Description&location=Home&trp=false&sprop=&sprop=name:"
+    end
+
     
     #   "http://www.google.com/calendar/event?action=TEMPLATE&text="+ title +"&dates="+
     #   + start_time.to_s(:number) +
